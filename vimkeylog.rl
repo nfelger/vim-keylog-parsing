@@ -5,7 +5,6 @@
 %%{
     machine vimkeylog;
     write data;
-
 }%%
 
 int DEBUG = 1;

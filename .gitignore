@@ -6,4 +6,5 @@ venv
 *.egg-info
 vimkeylog.c
 build
+dist
 out.pdf
