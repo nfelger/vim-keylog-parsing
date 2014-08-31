@@ -39,7 +39,7 @@ static char * escape_control_chars(const char *orig) {
     return result;
 }
 
-static PyObject * vimkeylogparser_parse(PyObject *self, PyObject *args)
+static PyObject * vimkeylog_parse(PyObject *self, PyObject *args)
 {
     const char *input;
     if (!PyArg_ParseTuple(args, "s", &input))
@@ -146,12 +146,12 @@ static PyObject * vimkeylogparser_parse(PyObject *self, PyObject *args)
 }
 
 static PyMethodDef VimParseMethods[] = {
-    {"parse",  vimkeylogparser_parse, METH_VARARGS, "Parse Vim command logs."},
+    {"parse",  vimkeylog_parse, METH_VARARGS, "Parse Vim command logs."},
     {NULL, NULL, 0, NULL}  /* Sentinel */
 };
 
     PyMODINIT_FUNC
-initvimkeylogparser(void)
+initvimkeylog(void)
 {
-    (void) Py_InitModule("vimkeylogparser", VimParseMethods);
+    (void) Py_InitModule("vimkeylog", VimParseMethods);
 }
